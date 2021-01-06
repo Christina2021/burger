@@ -1,6 +1,8 @@
-var express = require("express");
-var burger = require("../models/burger.js");
+const express = require("express");
+const burger = require("../models/burger.js");
+
+const router = express.Router();
 
 //Create the router for the app, and export the router at the end of your file
 
-//module.exports = ;
+module.exports = router;
