@@ -9,8 +9,12 @@ var orm = {
             cb(data);
         })
     },
-    insertOne: function() {
-
+    insertOne: function(tableInput, col, val, cb) {
+        let queryString = `INSERT INTO ?? (??) VALUES (?)`;
+        connection.query(queryString, [tableInput, col, val], function (err, data) {
+            if (err) throw err;
+            cb(data);
+        })
     },
     updateOne: function() {
 

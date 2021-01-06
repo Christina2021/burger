@@ -15,10 +15,16 @@ router.get("/", function(req, res) {
     })
 });
 
+//Post
 router.post("/api/burgers", function (req, res) {
-
+    //From burger.js insertOne, adds new burger to table
+    burger.insertOne(["burger_name"],[req.body.burger_name], function(data){
+        //Send back ID
+        res.json({ id: data.insertId });
+    });
 });
 
+//Put
 router.put("/api/cats/:id", function(req, res) {
 
 });
