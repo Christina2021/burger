@@ -1,21 +1,38 @@
 body {
     background-color: #76ead7;
-    text-align: center;
 }
 
 h1 {
-    color: #393e46;   
+    color: #393e46;
+    margin-top: 2rem;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.center-section {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.devoured {
+    color: #e84a5f;
+    text-decoration: line-through;
 }
 
 #burger-image {
     border-radius: 5px;
     height: 15rem;
+    margin: auto;
 }
 
-.container {
-    margin: 10px auto;
-    height: 200px;
-    width: 200px;
-    background-color: red;
+#buger-lists {
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 

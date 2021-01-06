@@ -1,26 +1,48 @@
-<img id="burger-image" src="/assets/img/burger.jpg" alt="burger-image">
+<!--Header with image and title-->
+<header class="center-section">
+    <img id="burger-image" src="/assets/img/burger.jpg" alt="burger-image">
+    <h1>Eat Da Burger!</h1>
+</header>
 
-<h1>Eat Da Burger!</h1>
-
-<div class="container">
-    <ul>
-        {{#each burgers}}
-            {{#unless devoured}}
-                <button>Devour It!</button>
-            {{/unless}}
-        {{/each}}
-    </ul>
-
-    <ul>
-        {{#each burgers}}
-
-        {{/each}}
-    </ul>
+<!--Burger lists-->
+<div class="grid-container center-section" id="buger-lists">
+    <div class="grid-x">
+        <div class="cell small-6">
+            <h3>To eat!</h3>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li>
+                            {{this.burger_name}}
+                            <button type="button" class="hollow button alert small">Devour It!</button>
+                        </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="cell small-6">
+            <h3>I ate!</h3>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li class="devoured">
+                            {{this.burger_name}}
+                        </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>
 
+<!--For adding more burgers to the devour list-->
+<form class="grid-container center-section">
+    <div class="grid-x">
+        <div class="cell small-6 small-offset-3">
+            <textarea name="add-burger" id="add-burger" cols="20" rows="5" maxlength="50"></textarea>
+        </div>
+    </div>
 
-<form>
-    <textarea name="add-burger" id="add-burger" cols="30" rows="5" maxlength="100"></textarea><br>
-    <button type="submit">Submit</button>
+    <button type="submit" class="success button">Submit</button>
     <p>Enter a burger you would like to eat, then click the "Submit" button!</p>
 </form>
