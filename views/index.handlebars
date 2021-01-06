@@ -1,0 +1,26 @@
+<img id="burger-image" src="/assets/img/burger.jpg" alt="burger-image">
+
+<h1>Eat Da Burger!</h1>
+
+<div class="container">
+    <ul>
+        {{#each burgers}}
+            {{#unless devoured}}
+                <button>Devour It!</button>
+            {{/unless}}
+        {{/each}}
+    </ul>
+
+    <ul>
+        {{#each burgers}}
+
+        {{/each}}
+    </ul>
+</div>
+
+
+<form>
+    <textarea name="add-burger" id="add-burger" cols="30" rows="5" maxlength="100"></textarea><br>
+    <button type="submit">Submit</button>
+    <p>Enter a burger you would like to eat, then click the "Submit" button!</p>
+</form>

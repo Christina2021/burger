@@ -1,0 +1,21 @@
+body {
+    background-color: #76ead7;
+    text-align: center;
+}
+
+h1 {
+    color: #393e46;   
+}
+
+#burger-image {
+    border-radius: 5px;
+    height: 15rem;
+}
+
+.container {
+    margin: 10px auto;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
