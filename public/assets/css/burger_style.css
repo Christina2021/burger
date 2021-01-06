@@ -15,6 +15,10 @@ ul {
     list-style-type: none;
 }
 
+textarea {
+    padding: 2rem;
+}
+
 .center-section {
     margin: 2rem auto;
     text-align: center;
