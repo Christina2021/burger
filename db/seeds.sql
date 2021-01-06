@@ -1,4 +1,5 @@
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("double double animal style", false),
-       ("burnin' love", false),
-       ("mushroom and swiss", false);
+VALUES ("Double Double Animal Style", false),
+       ("Burnin' Love", false),
+       ("Mushroom and Swiss", true);
+
