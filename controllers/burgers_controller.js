@@ -26,7 +26,15 @@ router.post("/api/burgers", function (req, res) {
 
 //Put
 router.put("/api/cats/:id", function(req, res) {
-
+    //Updates the burger for devoured from false to true
+    burger.updateOne(["devoured"],[req.body.devoured], [req.params.id], function(data){
+        //Response
+        if (data.changedRows === 0) {
+            //If no rows changed, then id does not exist. Give 404 error
+            return res.status(404).end();
+          }
+        res.status(200).end();
+    });
 });
 
 module.exports = router;

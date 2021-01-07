@@ -16,7 +16,12 @@ var orm = {
             cb(data);
         })
     },
-    updateOne: function() {
+    updateOne: function(tableInput, col1, val1, val2, cb) {
+        let queryString = `UPDATE ?? SET ?? = ? WHERE id = ?;`
+        connection.query(queryString, [tableInput, col1, val1, val2], function (err, data) {
+            if (err) throw err;
+            cb(data);
+        })
 
     }
 };

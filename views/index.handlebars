@@ -1,20 +1,20 @@
 <!--Header with image and title-->
-<header class="center-section">
+<header class="each-section green-section">
     <img id="burger-image" src="/assets/img/burger.jpg" alt="burger-image">
     <h1>Eat Da Burger!</h1>
 </header>
 
 <!--Burger lists-->
-<div class="grid-container center-section" id="buger-lists">
+<div class="grid-container each-section" id="buger-lists">
     <div class="grid-x">
         <div class="cell small-6">
             <h3>To eat!</h3>
             <ul>
                 {{#each burgers}}
                     {{#unless devoured}}
-                        <li>
+                        <li data-id="{{this.id}}">
                             {{this.burger_name}}
-                            <button type="button" class="hollow button alert small" id="devour-button">Eat <i class="fas fa-hamburger"></i></button>
+                            <button type="button" class="hollow button alert small devour-button">Eat <i class="fas fa-hamburger"></i></button>
                         </li>
                     {{/unless}}
                 {{/each}}
@@ -36,7 +36,7 @@
 </div>
 
 <!--For adding more burgers to the devour list-->
-<form class="grid-container center-section">
+<form class="grid-container each-section green-section">
     <div class="grid-x">
         <div class="cell small-6 small-offset-3">
             <textarea name="add-burger" id="add-burger" cols="20" rows="1" maxlength="50" placeholder="Enter burger name here!"></textarea>

@@ -11,17 +11,40 @@ document.addEventListener("DOMContentLoaded", function() {
             burger_name: newBurgerInfo.val()
         };
 
-        // POST request
+        //POST request
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
             function() {
-            // Reload the page for new burger
-            location.reload();
+                //Reload the page for new burger
+                location.reload();
             }
         );
     });
+
+    //Update burger devoured
+    $(".devour-button").click(function(e){
+        e.preventDefault();
+
+        let id = $(this).parent().data("id");
+
+        //Value must be "1"; cannot be "true"
+        let nowDevoured = {
+            devoured: 1
+        };
+
+        //PUT request
+        $.ajax("/api/cats/" + id, {
+            type: "PUT",
+            data: nowDevoured
+        }).then(
+            function() {
+                //Reload the page for updated data
+                location.reload();
+            }
+        )
+    })
 
 });
 

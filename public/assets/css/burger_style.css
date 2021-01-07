@@ -19,9 +19,14 @@ textarea {
     padding: 2rem;
 }
 
-.center-section {
-    margin: 2rem auto;
-    text-align: center;
+.each-section {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align:center;
+}
+
+.green-section {
+    background-color: #28df99;
 }
 
 .devoured {
