@@ -1,14 +1,29 @@
 body {
-    background-color: #76ead7;
+    background-color: #fde8cd;
+    min-height: 100vh;
+}
+
+header {
+    background-image: urL(../img/burger.jpg);
+    background-size: contain;
+    background-position: center;
 }
 
 h1 {
-    color: #393e46;
-    margin-top: 2rem;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    color:black;
+    font-size: 5rem;
+    display: inline-block;
+    padding: 1rem;
 }
 
 h3 {
     text-decoration: underline;
+}
+
+h1, h3 {
+    font-family: 'Redressed', cursive;
 }
 
 ul {
@@ -25,8 +40,21 @@ textarea {
     text-align:center;
 }
 
-.green-section {
-    background-color: #28df99;
+.top-section {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.blue-section {
+    background-color: #7fdbda;
+}
+
+.bottom-section {
+    padding: 1rem;
+}
+
+.bottom-section p {
+    margin-bottom: 0;
 }
 
 .devoured {
