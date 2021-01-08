@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         //PUT request
-        $.ajax("/api/cats/" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: nowDevoured
         }).then(
