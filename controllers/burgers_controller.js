@@ -25,7 +25,7 @@ router.post("/api/burgers", function (req, res) {
 });
 
 //Put
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/burgers/:id", function(req, res) {
     //Updates the burger for devoured from false to true
     burger.updateOne(["devoured"],[req.body.devoured], [req.params.id], function(data){
         //Response
